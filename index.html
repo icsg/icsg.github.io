@@ -1,25 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>icsg</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="icsg">
-<meta name="keywords" content="icsg">
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-<meta name="revisit-after" content="1 days">
-<meta name="author" content="icsg">
-<link rel="icon" type="image/x-icon" href="/icsg.ico">
-<meta name="google-site-verification" content="HiBWlhD-g1zUMU4eQe4ZG_czm18u878s4Ix7eC5-oN0" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
 </head>
 <body>
-<div align="center">
- <a href="https://icsg.bohr.io"  title="icsg"><img src="icsg.webp" alt="icsg" width="250" height="250"></a><br><br><br><br>
- <a href="tel:+31685424358" title="Call icsg"><img src="call.webp" alt="Call icsg" width="100" height="100"></a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="https://wa.me/31685424358" target="_blank" title="WhatsApp icsg"><img src="whatsapp.webp" alt="WhatsApp icsg" width="100" height="100"></a><br><br><br><br>
- <a href="mailto:icsg.git@gmail.com" title="Mail icsg"><img src="/mail.webp" alt="Mail icsg" width="100" height="100"></a><br><br><br><br>
- <img src="code.webp"  title="Code icsg" alt="Code icsg" width="116" height="116">
- <p>© 2024 icsg</p>
+
+<video autoplay muted loop id="myVideo">
+  <source src="space.webm" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>icsg</h1>
+  <p>Welcome to icsg</p>
+  <h2><a href="mailto:info.j.klein@gmail.com">Contact</a></h2>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
 </div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
 </body>
 </html>
